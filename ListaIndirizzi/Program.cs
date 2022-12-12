@@ -18,6 +18,13 @@ while (!file.EndOfStream)
    string province = array[4];
    string zip = array[5];
 
-   Indirizzo indirizzo1 = new Indirizzo(name,surname,street,city, province,zip);
+   Indirizzo indirizzo = new Indirizzo(name,surname,street,city, province,zip);
 
+  listaIndirizzi.Add(indirizzo);
 }
+file.Close();
+
+foreach (Indirizzo elemento in listaIndirizzi)
+{
+    Console.WriteLine(elemento.ToString());
+} 
