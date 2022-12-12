@@ -114,15 +114,19 @@ namespace ListaIndirizzi
         }
 
         //override
+        /// <summary>
+        /// questo metodo crea descrizione di ogni indirizzo, se è presente middle name o altri parti dell'indirizzo li indica se non sono presenti le ignora. 
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
-            string descr = $@"
+            string descrizione = $@"
           name: {this.name}";
 if(this.middleName == null) 
             { 
             }else
             {
-                descr += $@"
+                descrizione += $@"
           middleName:{this.middleName}";
 
             }
@@ -131,7 +135,7 @@ if (this.surname == null)
             {
             } else
             {
-                descr += $@"
+                descrizione += $@"
           surname:{this.surname}";
             }
 
@@ -139,18 +143,18 @@ if(this.street == null)
             {
             }else
             {
-            descr += $@"
+            descrizione += $@"
           street:{this.street}";
 
             }
 
-            descr+= $@"
+            descrizione+= $@"
           city: {this.city}
           province: {this.province}
           zip: {this.zip}
 ";
            
-            return descr;
+            return descrizione;
         }
       
        
