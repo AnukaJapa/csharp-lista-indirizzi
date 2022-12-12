@@ -145,26 +145,15 @@ if(this.street == null)
             }
 
             descr+= $@"
-          city: {IsEmpty(this.city)}
-          province: {IsEmpty(this.province)}
-          zip: {IsEmpty(this.zip)}
+          city: {this.city}
+          province: {this.province}
+          zip: {this.zip}
 ";
            
             return descr;
         }
       
-        //private methods
-
-        private string IsEmpty(string value)
-        {
-            if(value == "" || value == null)
-            {
-                return "is not indicated";
-            } else
-            {
-                return value;
-            }
-        }
+       
     }
 
 
